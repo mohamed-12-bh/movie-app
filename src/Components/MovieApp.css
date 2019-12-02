@@ -1,0 +1,63 @@
+.btn-search{
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  color: aliceblue;
+}
+.input-search[type="text"] {
+
+  background-color : #d1d1d1; 
+}
+.rating{
+  padding: 10px;
+}
+
+.nav-menu {
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.search-movie {
+  display: flex;
+  margin-left: 50%;
+  padding: 10px;
+  
+}
+
+.card {
+  height: 50px;
+  margin-top: 20%;
+  width: 100%;
+  background-color: #a40606;
+  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+  
+}
+.card-img {
+  text-align: center;
+  margin: auto;
+}
+.img {
+  text-align: center;
+}
+.movi-app{
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+  
+}
+.btn-primary{
+  margin: auto;
+  width: 75%;
+  height: 50%;
+  background-color: #a40606;
+  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+  border: none;
+}
+.modal-body{
+  width:100%;
+  height: 20px;
+}
+
+.modal-title{
+  height: 5px;
+}
