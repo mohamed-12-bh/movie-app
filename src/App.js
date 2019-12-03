@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import NavBar from "./Components/NavBar";
 import MovieContainer from "./Components/MovieContainer";
 import "./Components/MovieApp.css";
-
-
+import WithLoading from "./Components/WithLoading";
+const MovieWithLoading = WithLoading(MovieContainer);
 export default class App extends Component {
   state = {
     minRating: 0,
@@ -33,8 +33,10 @@ export default class App extends Component {
         rating: 2
       }
     ],
-    
-    titleFilter: ""
+
+    titleFilter: "",
+
+    loading: true
   };
 
   // filterMovie() {
@@ -50,9 +52,15 @@ export default class App extends Component {
   addNewMovie = newMovie => {
     this.setState({
       ...this.state,
-      tab:[...this.state.tab,newMovie]
+      tab: [...this.state.tab, newMovie]
     });
   };
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 3000);
+  }
 
   render() {
     return (
@@ -73,11 +81,16 @@ export default class App extends Component {
         />
         <div>
           <div className="movie-container">
-            <MovieContainer
-              tab={this.state.tab.filter(el=>el.title.toUpperCase()
-                .includes(this.state.titleFilter.toUpperCase().trim()) && el.rating>= this.state.minRating)}
+            <MovieWithLoading
+              isLoading={this.state.loading}
+              tab={this.state.tab.filter(
+                el =>
+                  el.title
+                    .toUpperCase()
+                    .includes(this.state.titleFilter.toUpperCase().trim()) &&
+                  el.rating >= this.state.minRating
+              )}
               addMovie={this.addNewMovie}
-              
             />
           </div>
         </div>

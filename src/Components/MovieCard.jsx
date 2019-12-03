@@ -13,7 +13,7 @@ export default function MovieCard(props) {
           <img
             style={{ width: "60%" }}
             src={props.movieDetails.img}
-            alt="Card image cap"
+            alt="..."
           />
           <CardBody>
             <p>{props.movieDetails.title}</p>

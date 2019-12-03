@@ -23,8 +23,8 @@ export default class Modal extends Component {
             +
           </button>
 
-          <div  className="movi"
-            className="modal fade"
+          <div  className="movi modal fade"
+            
             id="exampleModal"
             tabindex="-1"
             role="dialog"
